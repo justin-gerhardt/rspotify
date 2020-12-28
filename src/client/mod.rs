@@ -172,6 +172,10 @@ fn append_device_id(path: &str, device_id: Option<String>) -> String {
 
 #[maybe_async]
 pub trait BaseClient: HTTPClient {
+    // TODO: these might be better off in a separate trait so that they don't
+    // have to be repeated both when implementing `BaseTrait` and `UserTrait`.
+    // Then, this would just inherit said trait to have access to `get_token`
+    // and similars.
     fn get_token(&self) -> &Token;
     fn get_creds(&self) -> &Credentials;
 
