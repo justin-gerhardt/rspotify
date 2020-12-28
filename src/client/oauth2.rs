@@ -13,9 +13,9 @@ use std::io::{Read, Write};
 use std::iter::FromIterator;
 use std::path::Path;
 
-use super::client::{ClientResult, Spotify};
-use super::http::{headers, BaseClient, Form, Headers};
-use super::util::{datetime_to_timestamp, generate_random_string};
+use crate::client::{ClientResult, Spotify};
+use crate::client::http::{headers, HTTPClient, Form, Headers};
+use crate::util::{datetime_to_timestamp, generate_random_string};
 
 mod auth_urls {
     pub const AUTHORIZE: &str = "https://accounts.spotify.com/authorize";

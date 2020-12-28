@@ -7,7 +7,7 @@ use serde_json::Value;
 
 use std::convert::TryInto;
 
-use super::{headers, BaseClient, Form, Headers, Query};
+use super::{headers, HTTPClient, Form, Headers, Query};
 use crate::client::{APIError, ClientError, ClientResult, Spotify};
 
 impl ClientError {
@@ -91,7 +91,7 @@ impl Spotify {
 }
 
 #[async_impl]
-impl BaseClient for Spotify {
+impl HTTPClient for Spotify {
     #[inline]
     async fn get(
         &self,

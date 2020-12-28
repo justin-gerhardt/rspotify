@@ -160,11 +160,7 @@
 #[cfg(not(all(feature = "client-reqwest", feature = "client-ureq")))]
 pub mod client;
 #[cfg(not(all(feature = "client-reqwest", feature = "client-ureq")))]
-mod http;
-#[cfg(not(all(feature = "client-reqwest", feature = "client-ureq")))]
 pub mod model;
-#[cfg(not(all(feature = "client-reqwest", feature = "client-ureq")))]
-pub mod oauth2;
 #[cfg(not(all(feature = "client-reqwest", feature = "client-ureq")))]
 pub mod util;
 
